@@ -1,0 +1,14 @@
+includes:
+  - phpstan-ignore-errors.neon
+  - phpstan-rules.neon
+parameters:
+  level: 8
+  paths:
+    - app
+    - config
+    - database
+    - routes
+    - src
+    - tests
+  excludePaths:
+    - database/migrations/*

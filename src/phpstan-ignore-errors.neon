@@ -1,0 +1,6 @@
+parameters:
+  ignoreErrors:
+#    -
+#      message: '#Use separate function calls with readable variable names#'
+#      paths:
+#        - config/*
