@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Run PHP_CodeSniffer
+## Usage: phpcs [flags] [args]
+## Example: "ddev phpcs" or "ddev phpcs --standard=PSR1 -e"
+## ExecRaw: true
+
+if [ ! -f vendor/bin/phpcs ]; then
+    echo 'PHP CodeSniffer does not exist in your project.'
+    echo 'Please verify that you installed the PHP CodeSniffer in your project directory.'
+    exit 1
+fi
+
+php vendor/bin/phpcs "$@"

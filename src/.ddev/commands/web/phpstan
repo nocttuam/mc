@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Run phpstan
+## Usage: phpstan [flags] [args]
+## Example: "ddev phpstan" or "ddev phpstan analyse"
+## ExecRaw: true
+
+if [ ! -f vendor/bin/phpstan ]; then
+    echo 'PHPStan does not exist in your project.'
+    echo 'Please verify that you installed the PHPStan in your project directory.'
+    exit 1
+fi
+
+if [ $# -eq 0 ]; then
+    php vendor/bin/phpstan analyse
+else
+    php vendor/bin/phpstan "$@"
+fi
